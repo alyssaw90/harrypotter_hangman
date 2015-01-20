@@ -1,0 +1,62 @@
+body { 
+background: url(harry_potter_wallpaper.png) no-repeat center center fixed; 
+background-size: cover;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+
+.char1,
+.char5,
+.char10,
+.char15,
+.char19 {
+  color: #710102;
+}
+
+.char2,
+.char7,
+.char11,
+.char16,
+.char20 {
+  color: #146d13;
+}
+
+.char3,
+.char8,
+.char12,
+.char17 {
+  color: #24326e;
+}
+
+.char4,
+.char9,
+.char14,
+.char18 {
+  color: #8a6908;
+}
+
+button {
+  font-family:'Josefin Sans', sans-serif;
+}
+
+canvas{
+  border: 1px solid black;
+}
+

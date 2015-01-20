@@ -1,1 +1,1 @@
-# harrypotter_hangman
+# Harry Potter Themed Hangman Game

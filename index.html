@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:700|Amatic+SC:700" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="sweet-alert.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script src="sweet-alert.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.lettering-0.6.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="hangman.js"></script>
+  <title>Harry Potter Hangman</title>
+</head>
+<body>
+  <div class="container text-center">
+    <h1 class="fancy_title">Harry Potter Hangman</h1>
+    <p>Choose the category and use the alphabet below to guess the word.</p>
+    <div>
+      <h2 id="selectCat">Select a category</h2>
+
+      <button id="characters" class="btn btn-primary">Characters</button>
+      <button id="magic" class="btn btn-primary">Magic!!!</button>
+      <button id="creatures" class="btn btn-primary">Creatures</button>
+      <button id="more" class="btn btn-primary">More!!!</button>
+      <br><br>
+      <button id="changeCategroy" class="cats classname btn btn-primary">Change Category</button>
+
+      <h3 id="categoryHeader">The category is: <span id="category"></span></h3>
+
+      <div id="guesswordbox">
+
+      </div>
+
+      <p>Wrong Guesses Remaining: <span id="guessesLeft"></span></p>
+
+      <button id="letter" class="btn btn-primary">a</button>
+      <button id="letter" class="btn btn-primary">b</button>
+      <button id="letter" class="btn btn-primary">c</button>
+      <button id="letter" class="btn btn-primary">d</button>
+      <button id="letter" class="btn btn-primary">e</button>
+      <button id="letter" class="btn btn-primary">f</button>
+      <button id="letter" class="btn btn-primary">g</button>
+      <button id="letter" class="btn btn-primary">h</button>
+      <button id="letter" class="btn btn-primary">i</button>
+      <button id="letter" class="btn btn-primary">j</button>
+      <button id="letter" class="btn btn-primary">k</button>
+      <button id="letter" class="btn btn-primary">l</button>
+      <button id="letter" class="btn btn-primary">m</button>
+      <button id="letter" class="btn btn-primary">n</button>
+      <button id="letter" class="btn btn-primary">o</button>
+      <button id="letter" class="btn btn-primary">p</button>
+      <button id="letter" class="btn btn-primary">q</button>
+      <button id="letter" class="btn btn-primary">r</button>
+      <button id="letter" class="btn btn-primary">s</button>
+      <button id="letter" class="btn btn-primary">t</button>
+      <button id="letter" class="btn btn-primary">u</button>
+      <button id="letter" class="btn btn-primary">v</button>
+      <button id="letter" class="btn btn-primary">w</button>
+      <button id="letter" class="btn btn-primary">x</button>
+      <button id="letter" class="btn btn-primary">y</button>
+      <button id="letter" class="btn btn-primary">z</button>
+      <br><br>
+      <canvas id="canvas" width="200px" height="300px"></canvas>
+    </div>
+  </div>
+  <script>
+   $(document).ready(function() {
+    $(".fancy_title").lettering();
+  });
+ </script>
+
+</body>
+</html>
