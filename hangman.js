@@ -189,15 +189,3 @@ $(document).ready(function(){
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
