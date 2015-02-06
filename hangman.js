@@ -18,7 +18,7 @@ $(document).ready(function(){
 
   var creatures = ["aragog", "basilisk", "boggart", "centaurs", "buckbeak", "cornish pixies", "crookshanks", "dementor", "dragon", "errol", "fang", "fawkes", "ghoul", "giant", "gnomes", "goblins", "grindylow", "hippogriff", "house elf", "nagini", "norbert", "mrs norris", "padfoot", "prongs", "scabers", "trevor", "werewolf"];
 
-  // var morePotterWords = ["auror", "azkaban", "beater", "black forest", "borgin and burkes", "butterbeer", "chamber of secrets", "chaser", "chocolate frogs", "daily prophet", "dark mark", "death eaters", "diagon alley", "dumbledores army", "firebolt", "flourish and blotts", "forbidden forest", "goblet of fire" "godrics hollow", "golden snitch", "great hall", "grey lady", "gringotts", "gryffindor", "hogsmeade", "hogwarts", "honeydukes", "hufflepuff", "inquisitorial squad", "keeper", "knight bus", "knockturn alley", "leaky cauldron", "ministry of magic", "mudblood", "muggle", "order of the phoneix", "peeves", "privet drive" "pumpkin juice", "pumpkin patsy", "quaffle", "quidditch", "room of requirement", "seeker", "slytherin", "sorting hat", "squib", "time turner", "triwizard tournament", "wand", "whomping willow", "zonkos"];
+  var morePotterWords = ["auror", "azkaban", "beater", "black forest", "borgin and burkes", "butterbeer", "chamber of secrets", "chaser", "chocolate frogs", "daily prophet", "dark mark", "death eaters", "diagon alley", "dumbledores army", "firebolt", "flourish and blotts", "forbidden forest", "goblet of fire", "godrics hollow", "golden snitch", "great hall", "grey lady", "gringotts", "gryffindor", "hogsmeade", "hogwarts", "honeydukes", "hufflepuff", "inquisitorial squad", "keeper", "knight bus", "knockturn alley", "leaky cauldron", "ministry of magic", "mudblood", "muggle", "order of the phoneix", "peeves", "privet drive", "pumpkin juice", "pumpkin patsy", "quaffle", "quidditch", "room of requirement", "seeker", "slytherin", "sorting hat", "squib", "time turner", "triwizard tournament", "wand", "whomping willow", "zonkos"];
 
   console.log(randomNum);
   $("#guessesLeft").html(guessesLeft);
@@ -42,7 +42,7 @@ $(document).ready(function(){
   //Magic button
   $("#magic").click(function(){
     categorySelect = true;
-    randomWord = characters[randomNum];
+    randomWord = classesAndSpells [randomNum];
     $("#characters,#magic,#creatures,#more").hide();
     $("#selectCat").hide();
     $("#category").html("Magic");
@@ -53,7 +53,7 @@ $(document).ready(function(){
   //Creature button
   $("#creatures").click(function(){
     categorySelect = true;
-    randomWord = characters[randomNum];
+    randomWord = creatures[randomNum];
     $("#characters,#magic,#creatures,#more").hide();
     $("#selectCat").hide();
     $("#category").html("Creatures");
@@ -64,7 +64,7 @@ $(document).ready(function(){
   //More button
   $("#more").click(function(){
     categorySelect = true;
-    randomWord = characters[randomNum];
+    randomWord = morePotterWords[randomNum];
     $("#characters,#magic,#creatures,#more").hide();
     $("#selectCat").hide();
     $("#category").html("more");
@@ -99,11 +99,11 @@ $(document).ready(function(){
     catSelect();
     var letter = $(this).html();
     var indexNum = randomWord.indexOf(letter);
-    
+
     console.log(indexNum);
-    
+
     if(indexNum == -1){
-      
+
       guessesLeft -= 1;
       $("#guessesLeft").html(guessesLeft);
 
@@ -152,9 +152,9 @@ $(document).ready(function(){
 
       $(this).css({"background-color": "red","color":"white"});
       $(this).attr("disabled","disabled");
-      
-      
-      
+
+
+
     }else{
       //Letter not in word
       while(randomWord.indexOf(letter,search_start) != -1){
@@ -168,7 +168,7 @@ $(document).ready(function(){
       $(this).css({"background-color": "green","color":"white"});
       $(this).attr("disabled","disabled");
       search_start = 0;
-      
+
 
     }
     //Winner!!
