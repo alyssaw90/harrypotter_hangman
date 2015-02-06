@@ -142,15 +142,21 @@ $(document).ready(function(){
         ct.lineTo(50,220);
         ct.stroke();
         //Losing alert
-        swal("You ran out of guesses!! You Lose! Let's Try Again. The word was " + randomWord);
+        swal({
+          title: "You lose!",
+          text: "The word was " + randomWord,
+          type: "error",
+          confirmButtonText: "Let's play again",
+          closeOnConfrim: false
+        }, function(isConfirm){
+            location.reload()
+        });
       }else{
-        swal(letter + " is not in the word! Guess another letter!");
+        swal("Oops..", letter + " is not in the word! Guess another letter!", "error");
       }
 
       $(this).css({"background-color": "red","color":"white"});
       $(this).attr("disabled","disabled");
-
-
 
     }else{
       //Letter not in word
@@ -166,13 +172,20 @@ $(document).ready(function(){
       $(this).attr("disabled","disabled");
       search_start = 0;
 
-
     }
     //Winner!!
     if(lettersLeft <= 0){
-      swal("You won! Let's play again!");
-      location.reload();
+      swal({
+          title: "You win!",
+          text: "Click below to play again",
+          type: "success",
+          confirmButtonText: "Let's play again",
+          closeOnConfrim: false
+        }, function(isConfirm){
+            location.reload()
+        });
     }
+
   });
 });
 
