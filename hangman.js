@@ -13,6 +13,7 @@ $(document).ready(function(){
   var categorySelect = false;
 
   //Category arrays
+  var
   var characters = ["katie-bell", "sirius-black", "lavendar-brown", "cho-chang", "crabbe", "colin-creevy", "bartemius-crouch", "bartemius-crouch-jr", "fleur-delacour", "amos-diggory", "cedric-diggory", "albus-dumbledore", "dudley-dursley", "filch", "seamus", "nicholas-flammel", "mundungus-fletcher", "cornelius-fudge", "hermonie-granger", "godric-gryffindor", "goyle", "hagrid", "dobby", "helga-hufflepuff", "lee-jordan", "kreacher", "viktor-krum", "bellatrix-lestrange", "gilderoy-lockhart", "neville-longbottom", "luna-lovegood", "draco-malfoy", "lucius-malfoy", "narcissa-malfoy", "minerva-mcgonagall", "alastor-moody", "moaning-myrtle", "nearly-headless-nick", "peter-pettigrew", "harry-potter", "james-potter", "lily-potter", "professor-quirrell", "rowena-ravenclaw", "tom-marvolo-riddle", "rita-skeeter", "salazar-slytherin", "severus-snape", "professor-sprout", "dean-thomas", "tonks", "dolores-umbridge", "lord-voldemort", "fred-weasley", "george-weasley", "ginny-weasley", "ron-weasley", "oliver-wood"];
   var classesAndSpells = ["accio", "aguamenti", "alohomora", "arithmancy", "avada-kedavra", "apparate", "bubble-head-charm", "care-of-magical-creatures", "charm", "crutiatus-curse", "diffindo", "divination", "defense-against-the-dark-arts", "elixir-of-life", "engorgio", "evanesco", "expecto-patronum", "expelliarmus", "extendable-ear", "felix-felicis", "floo-powder", "gillyweed", "grim", "herbology", "howler", "imperius-curse", "incendio", "invisibility-cloak", "lumos", "madrake", "marauders-map", "horcrux", "obliviate", "nox", "parsel-tongue", "patronus", "petrificus-totalus", "polyjuice-potion", "port-key", "potions", "reducio", "riddikulus", "transfiguration", "unforgiveable-curses", "unbreakable vow"];
   var creatures = ["aragog", "basilisk", "boggart", "centaurs", "buckbeak", "cornish-pixies", "crookshanks", "dementor", "dragon", "errol", "fang", "fawkes", "ghoul", "giant", "gnomes", "goblins", "grindylow", "hippogriff", "house elf", "nagini", "norbert", "mrs-norris", "padfoot", "prongs", "scabers", "trevor", "werewolf"];
@@ -70,20 +71,6 @@ $(document).ready(function(){
     $("button:not(#characters,#magic,#creatures,#changeCategory)").attr("disabled",false)
     numSpaces();
   });
-  //Change category button
-  $("#changeCategory").click(function(){
-    categorySelect = false;
-    $("#characters,#magic,#creatures,#more").show();
-    $(this).hide();
-    randomWord="";
-    randomNum = Math.floor(Math.random() * 10);
-    $("#guesswordbox").empty();
-    $("button:not(#characters,#magic,#creatures,#more,#changeCategory)").css({"background":"#eaeaea", "color": "black"})
-    $("button:not(#characters,#magic,#creatures,#more,#changeCategory)").attr("disabled","disabled");
-    $("#guessesLeft").html(guessesLeft);
-    ct.clearRect(0,0,c.width,c.height)
-    ct.beginPath();
-  })
   //Number of spaces in word
   function numSpaces(){
     console.log(randomWord);
